@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"kenhuang041.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.25.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"找到 ${hits} 個搜索結果（用時 ${time} 毫秒）","hits":"找到 ${hits} 個搜索結果"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="test">
+    <meta name="description" content="快速處理區間相關內容的資料結構">
 <meta property="og:type" content="article">
 <meta property="og:title" content="線段樹">
 <meta property="og:url" content="https://kenhuang041.github.io/2025/09/16/Segment-Tree/index.html">
 <meta property="og:site_name" content="kenhuang&#39;s blog">
-<meta property="og:description" content="test">
+<meta property="og:description" content="快速處理區間相關內容的資料結構">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2025-09-16T01:53:47.000Z">
-<meta property="article:modified_time" content="2025-09-16T02:50:54.539Z">
+<meta property="article:modified_time" content="2025-09-16T05:07:05.004Z">
 <meta property="article:author" content="ken">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="tree">
@@ -139,7 +139,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B7%9A%E6%AE%B5%E6%A8%B9"><span class="nav-number">1.</span> <span class="nav-text">線段樹</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B5%90%E6%A7%8B"><span class="nav-number">1.0.1.</span> <span class="nav-text">結構</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD"><span class="nav-number">1.0.2.</span> <span class="nav-text">功能</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B8%BD%E7%B5%90"><span class="nav-number">1.1.</span> <span class="nav-text">總結</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%99%82%E9%96%93%E8%A4%87%E9%9B%9C%E5%BA%A6"><span class="nav-number">1.1.1.</span> <span class="nav-text">時間複雜度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A9%BA%E9%96%93%E8%A4%87%E9%9B%9C%E5%BA%A6"><span class="nav-number">1.1.2.</span> <span class="nav-text">空間複雜度</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B5%90%E6%A7%8B"><span class="nav-number">1.</span> <span class="nav-text">結構</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD"><span class="nav-number">2.</span> <span class="nav-text">功能</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B8%BD%E7%B5%90"><span class="nav-number"></span> <span class="nav-text">總結</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%99%82%E9%96%93%E8%A4%87%E9%9B%9C%E5%BA%A6"><span class="nav-number">0.1.</span> <span class="nav-text">時間複雜度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A9%BA%E9%96%93%E8%A4%87%E9%9B%9C%E5%BA%A6"><span class="nav-number">0.2.</span> <span class="nav-text">空間複雜度</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -211,7 +211,7 @@
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="線段樹 | kenhuang's blog">
-      <meta itemprop="description" content="test">
+      <meta itemprop="description" content="快速處理區間相關內容的資料結構">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -227,7 +227,7 @@
       <span class="post-meta-item-text">發表於</span>
       
 
-      <time title="創建時間：2025-09-16 09:53:47 / 修改時間：10:50:54" itemprop="dateCreated datePublished" datetime="2025-09-16T09:53:47+08:00">2025-09-16</time>
+      <time title="創建時間：2025-09-16 09:53:47 / 修改時間：13:07:05" itemprop="dateCreated datePublished" datetime="2025-09-16T09:53:47+08:00">2025-09-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -242,19 +242,22 @@
   
 </div>
 
-            <div class="post-description">test</div>
+            <div class="post-description">快速處理區間相關內容的資料結構</div>
         </div>
       </header>
 
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="線段樹"><a href="#線段樹" class="headerlink" title="線段樹"></a>線段樹</h1><p>求區間和跟修改都優於普通陣列的資料結構<br>複雜度跟BIT一樣，都是O(log n)<br>但更直觀一點? (我是這麼覺得^^) <br></p>
+    <div class="post-body" itemprop="articleBody"><p>求區間和跟修改都優於普通陣列的資料結構<br>複雜度跟BIT一樣，都是O(log n)<br>但更直觀一點? (我是這麼覺得^^) <br></p>
 <h3 id="結構"><a href="#結構" class="headerlink" title="結構"></a>結構</h3><p>線段樹是一個完整二元樹，假設是一個長度為9的線段樹，則其二元樹如下圖所示：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">        [0,8]</span><br><span class="line">       /      \</span><br><span class="line">   [0,4]      [5,8]</span><br><span class="line">   /   \      /   \</span><br><span class="line">[0,2] [3,4] [5,6] [7,8]</span><br><span class="line"> / \   / \   / \   / \</span><br><span class="line">[0,1][2,2][3,3][4,4][5,5][6,6][7,7][8,8]</span><br><span class="line"> / \</span><br><span class="line">[0,0][1,1]</span><br></pre></td></tr></table></figure>
 
 <p>用陣列存取，若根節點為<code>tree[1]</code>（通常從1開始），則其左右子節點存放位置如下</p>
-<p>$$<br>\begin{aligned}<br>左子節點 &amp;: 2i \<br>右子節點 &amp;: 2i+1 \<br>\end{aligned}<br>$$</p>
+<ul>
+<li>左子節點 -&gt; 2i</li>
+<li>右子節點 -&gt; 2i+1</li>
+</ul>
 <p>依照規則填入數字，所以<code>tree[1] = [0,8]</code>, <code>tree[2] = [0,4]</code>, <code>tree[3] = [5,8]</code> <br><br>接下來就可以用程式碼實現了 </p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 建線段樹</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">build</span><span class="params">(<span class="type">int</span> node,<span class="type">int</span> l, <span class="type">int</span> r)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (l == r) &#123; <span class="comment">// 葉節點 終止遞迴</span></span><br><span class="line">        tree[node] = a[l];</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> mid = (l + r) / <span class="number">2</span>;                            <span class="comment">// 切分</span></span><br><span class="line">    <span class="built_in">build</span>(node * <span class="number">2</span>, l, mid);                          <span class="comment">// 左子樹 → node*2</span></span><br><span class="line">    <span class="built_in">build</span>(node * <span class="number">2</span> + <span class="number">1</span>, mid + <span class="number">1</span>, r);                  <span class="comment">// 右子樹 → node*2+1</span></span><br><span class="line">    tree[node] = tree[node * <span class="number">2</span>] + tree[node * <span class="number">2</span> + <span class="number">1</span>]; <span class="comment">// 設定當前節點值為兩子節點總和</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -268,13 +271,15 @@
 <p>修改單點也是差不多的方式，從根節點向下找到需更改的葉節點，再透過遞迴的回溯更新被影響的節點就好了</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 單點修改 a[pos] = val;</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">modify</span><span class="params">(<span class="type">int</span> node, <span class="type">int</span> l, <span class="type">int</span> r, <span class="type">int</span> pos, <span class="type">int</span> val)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (l == r) &#123; <span class="comment">//修改葉節點</span></span><br><span class="line">        tree[node] = val;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//二分搜尋</span></span><br><span class="line">    <span class="type">int</span> mid = (l + r) / <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">if</span> (pos &lt;= mid)</span><br><span class="line">        <span class="built_in">modify</span>(node * <span class="number">2</span>, l, mid, pos, val);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">modify</span>(node * <span class="number">2</span> + <span class="number">1</span>, mid + <span class="number">1</span>, r, pos, val);</span><br><span class="line"></span><br><span class="line">    tree[node] = tree[node * <span class="number">2</span>] + tree[node * <span class="number">2</span> + <span class="number">1</span>]; <span class="comment">//更改被影響節點</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<br>
+
 <h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>線段樹是一個非常實用的資料結構，特別適合處理區間查詢和單點修改的問題。雖然實作稍微複雜，但一旦理解其原理，就能靈活運用於各種競程題目中。</p>
-<h3 id="時間複雜度"><a href="#時間複雜度" class="headerlink" title="時間複雜度"></a>時間複雜度</h3><ul>
-<li><strong>建構</strong>：O(n)</li>
-<li><strong>查詢</strong>：O(log n)</li>
-<li><strong>修改</strong>：O(log n)</li>
+<h4 id="時間複雜度"><a href="#時間複雜度" class="headerlink" title="時間複雜度"></a>時間複雜度</h4><ul>
+<li>建構：O(n)</li>
+<li>查詢：O(log n)</li>
+<li>修改：O(log n)</li>
 </ul>
-<h3 id="空間複雜度"><a href="#空間複雜度" class="headerlink" title="空間複雜度"></a>空間複雜度</h3><ul>
+<h4 id="空間複雜度"><a href="#空間複雜度" class="headerlink" title="空間複雜度"></a>空間複雜度</h4><ul>
 <li>O(4n)（通常開 4 倍大小的陣列）</li>
 </ul>
 <hr>
